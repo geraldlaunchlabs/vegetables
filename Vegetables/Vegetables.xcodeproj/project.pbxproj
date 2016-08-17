@@ -1,0 +1,567 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6038C4231D64341400A5AA8B /* noImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6038C4221D64341400A5AA8B /* noImg.png */; };
+		603E73F51D62B59500589F7C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 603E73F41D62B59500589F7C /* main.m */; };
+		603E73F81D62B59500589F7C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 603E73F71D62B59500589F7C /* AppDelegate.m */; };
+		603E73FB1D62B59500589F7C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603E73FA1D62B59500589F7C /* ViewController.m */; };
+		603E73FE1D62B59500589F7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 603E73FC1D62B59500589F7C /* Main.storyboard */; };
+		603E74011D62B59500589F7C /* Vegetables.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 603E73FF1D62B59500589F7C /* Vegetables.xcdatamodeld */; };
+		603E74031D62B59500589F7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 603E74021D62B59500589F7C /* Assets.xcassets */; };
+		603E74061D62B59500589F7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 603E74041D62B59500589F7C /* LaunchScreen.storyboard */; };
+		603E74111D62B59500589F7C /* VegetablesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 603E74101D62B59500589F7C /* VegetablesTests.m */; };
+		603E741C1D62B59500589F7C /* VegetablesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 603E741B1D62B59500589F7C /* VegetablesUITests.m */; };
+		603E742B1D62B61C00589F7C /* VegetablesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603E742A1D62B61C00589F7C /* VegetablesViewController.m */; };
+		603E74371D6303AC00589F7C /* loading.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 603E74361D6303AC00589F7C /* loading.jpg */; };
+		603E74391D6305CD00589F7C /* noImg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 603E74381D6305CD00589F7C /* noImg.jpg */; };
+		603E743C1D63158700589F7C /* AddVegetableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603E743B1D63158700589F7C /* AddVegetableViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		603E740D1D62B59500589F7C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 603E73E81D62B59500589F7C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 603E73EF1D62B59500589F7C;
+			remoteInfo = Vegetables;
+		};
+		603E74181D62B59500589F7C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 603E73E81D62B59500589F7C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 603E73EF1D62B59500589F7C;
+			remoteInfo = Vegetables;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6038C4221D64341400A5AA8B /* noImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noImg.png; sourceTree = "<group>"; };
+		603E73F01D62B59500589F7C /* Vegetables.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vegetables.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		603E73F41D62B59500589F7C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		603E73F61D62B59500589F7C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		603E73F71D62B59500589F7C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		603E73F91D62B59500589F7C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		603E73FA1D62B59500589F7C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		603E73FD1D62B59500589F7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		603E74001D62B59500589F7C /* Vegetables.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Vegetables.xcdatamodel; sourceTree = "<group>"; };
+		603E74021D62B59500589F7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		603E74051D62B59500589F7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		603E74071D62B59500589F7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		603E740C1D62B59500589F7C /* VegetablesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VegetablesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		603E74101D62B59500589F7C /* VegetablesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VegetablesTests.m; sourceTree = "<group>"; };
+		603E74121D62B59500589F7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		603E74171D62B59500589F7C /* VegetablesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VegetablesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		603E741B1D62B59500589F7C /* VegetablesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VegetablesUITests.m; sourceTree = "<group>"; };
+		603E741D1D62B59500589F7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		603E74291D62B61C00589F7C /* VegetablesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VegetablesViewController.h; sourceTree = "<group>"; };
+		603E742A1D62B61C00589F7C /* VegetablesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VegetablesViewController.m; sourceTree = "<group>"; };
+		603E74361D6303AC00589F7C /* loading.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loading.jpg; sourceTree = "<group>"; };
+		603E74381D6305CD00589F7C /* noImg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = noImg.jpg; sourceTree = "<group>"; };
+		603E743A1D63158700589F7C /* AddVegetableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddVegetableViewController.h; sourceTree = "<group>"; };
+		603E743B1D63158700589F7C /* AddVegetableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddVegetableViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		603E73ED1D62B59500589F7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		603E74091D62B59500589F7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		603E74141D62B59500589F7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		603E73E71D62B59500589F7C = {
+			isa = PBXGroup;
+			children = (
+				603E74361D6303AC00589F7C /* loading.jpg */,
+				603E74381D6305CD00589F7C /* noImg.jpg */,
+				6038C4221D64341400A5AA8B /* noImg.png */,
+				603E73F21D62B59500589F7C /* Vegetables */,
+				603E740F1D62B59500589F7C /* VegetablesTests */,
+				603E741A1D62B59500589F7C /* VegetablesUITests */,
+				603E73F11D62B59500589F7C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		603E73F11D62B59500589F7C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				603E73F01D62B59500589F7C /* Vegetables.app */,
+				603E740C1D62B59500589F7C /* VegetablesTests.xctest */,
+				603E74171D62B59500589F7C /* VegetablesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		603E73F21D62B59500589F7C /* Vegetables */ = {
+			isa = PBXGroup;
+			children = (
+				603E73F61D62B59500589F7C /* AppDelegate.h */,
+				603E73F71D62B59500589F7C /* AppDelegate.m */,
+				603E73F91D62B59500589F7C /* ViewController.h */,
+				603E73FA1D62B59500589F7C /* ViewController.m */,
+				603E74291D62B61C00589F7C /* VegetablesViewController.h */,
+				603E742A1D62B61C00589F7C /* VegetablesViewController.m */,
+				603E743A1D63158700589F7C /* AddVegetableViewController.h */,
+				603E743B1D63158700589F7C /* AddVegetableViewController.m */,
+				603E73FC1D62B59500589F7C /* Main.storyboard */,
+				603E74041D62B59500589F7C /* LaunchScreen.storyboard */,
+				603E74071D62B59500589F7C /* Info.plist */,
+				603E73FF1D62B59500589F7C /* Vegetables.xcdatamodeld */,
+				603E74021D62B59500589F7C /* Assets.xcassets */,
+				603E73F31D62B59500589F7C /* Supporting Files */,
+			);
+			path = Vegetables;
+			sourceTree = "<group>";
+		};
+		603E73F31D62B59500589F7C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				603E73F41D62B59500589F7C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		603E740F1D62B59500589F7C /* VegetablesTests */ = {
+			isa = PBXGroup;
+			children = (
+				603E74101D62B59500589F7C /* VegetablesTests.m */,
+				603E74121D62B59500589F7C /* Info.plist */,
+			);
+			path = VegetablesTests;
+			sourceTree = "<group>";
+		};
+		603E741A1D62B59500589F7C /* VegetablesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				603E741B1D62B59500589F7C /* VegetablesUITests.m */,
+				603E741D1D62B59500589F7C /* Info.plist */,
+			);
+			path = VegetablesUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		603E73EF1D62B59500589F7C /* Vegetables */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 603E74201D62B59500589F7C /* Build configuration list for PBXNativeTarget "Vegetables" */;
+			buildPhases = (
+				603E73EC1D62B59500589F7C /* Sources */,
+				603E73ED1D62B59500589F7C /* Frameworks */,
+				603E73EE1D62B59500589F7C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Vegetables;
+			productName = Vegetables;
+			productReference = 603E73F01D62B59500589F7C /* Vegetables.app */;
+			productType = "com.apple.product-type.application";
+		};
+		603E740B1D62B59500589F7C /* VegetablesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 603E74231D62B59500589F7C /* Build configuration list for PBXNativeTarget "VegetablesTests" */;
+			buildPhases = (
+				603E74081D62B59500589F7C /* Sources */,
+				603E74091D62B59500589F7C /* Frameworks */,
+				603E740A1D62B59500589F7C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				603E740E1D62B59500589F7C /* PBXTargetDependency */,
+			);
+			name = VegetablesTests;
+			productName = VegetablesTests;
+			productReference = 603E740C1D62B59500589F7C /* VegetablesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		603E74161D62B59500589F7C /* VegetablesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 603E74261D62B59500589F7C /* Build configuration list for PBXNativeTarget "VegetablesUITests" */;
+			buildPhases = (
+				603E74131D62B59500589F7C /* Sources */,
+				603E74141D62B59500589F7C /* Frameworks */,
+				603E74151D62B59500589F7C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				603E74191D62B59500589F7C /* PBXTargetDependency */,
+			);
+			name = VegetablesUITests;
+			productName = VegetablesUITests;
+			productReference = 603E74171D62B59500589F7C /* VegetablesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		603E73E81D62B59500589F7C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = LLDM;
+				TargetAttributes = {
+					603E73EF1D62B59500589F7C = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					603E740B1D62B59500589F7C = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 603E73EF1D62B59500589F7C;
+					};
+					603E74161D62B59500589F7C = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 603E73EF1D62B59500589F7C;
+					};
+				};
+			};
+			buildConfigurationList = 603E73EB1D62B59500589F7C /* Build configuration list for PBXProject "Vegetables" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 603E73E71D62B59500589F7C;
+			productRefGroup = 603E73F11D62B59500589F7C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				603E73EF1D62B59500589F7C /* Vegetables */,
+				603E740B1D62B59500589F7C /* VegetablesTests */,
+				603E74161D62B59500589F7C /* VegetablesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		603E73EE1D62B59500589F7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6038C4231D64341400A5AA8B /* noImg.png in Resources */,
+				603E74061D62B59500589F7C /* LaunchScreen.storyboard in Resources */,
+				603E74031D62B59500589F7C /* Assets.xcassets in Resources */,
+				603E73FE1D62B59500589F7C /* Main.storyboard in Resources */,
+				603E74371D6303AC00589F7C /* loading.jpg in Resources */,
+				603E74391D6305CD00589F7C /* noImg.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		603E740A1D62B59500589F7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		603E74151D62B59500589F7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		603E73EC1D62B59500589F7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				603E73FB1D62B59500589F7C /* ViewController.m in Sources */,
+				603E74011D62B59500589F7C /* Vegetables.xcdatamodeld in Sources */,
+				603E743C1D63158700589F7C /* AddVegetableViewController.m in Sources */,
+				603E742B1D62B61C00589F7C /* VegetablesViewController.m in Sources */,
+				603E73F81D62B59500589F7C /* AppDelegate.m in Sources */,
+				603E73F51D62B59500589F7C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		603E74081D62B59500589F7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				603E74111D62B59500589F7C /* VegetablesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		603E74131D62B59500589F7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				603E741C1D62B59500589F7C /* VegetablesUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		603E740E1D62B59500589F7C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 603E73EF1D62B59500589F7C /* Vegetables */;
+			targetProxy = 603E740D1D62B59500589F7C /* PBXContainerItemProxy */;
+		};
+		603E74191D62B59500589F7C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 603E73EF1D62B59500589F7C /* Vegetables */;
+			targetProxy = 603E74181D62B59500589F7C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		603E73FC1D62B59500589F7C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				603E73FD1D62B59500589F7C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		603E74041D62B59500589F7C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				603E74051D62B59500589F7C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		603E741E1D62B59500589F7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		603E741F1D62B59500589F7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		603E74211D62B59500589F7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Vegetables/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.launchlabs.Vegetables;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		603E74221D62B59500589F7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Vegetables/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.launchlabs.Vegetables;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		603E74241D62B59500589F7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = VegetablesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.launchlabs.VegetablesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vegetables.app/Vegetables";
+			};
+			name = Debug;
+		};
+		603E74251D62B59500589F7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = VegetablesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.launchlabs.VegetablesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vegetables.app/Vegetables";
+			};
+			name = Release;
+		};
+		603E74271D62B59500589F7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = VegetablesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.launchlabs.VegetablesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Vegetables;
+			};
+			name = Debug;
+		};
+		603E74281D62B59500589F7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = VegetablesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.launchlabs.VegetablesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Vegetables;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		603E73EB1D62B59500589F7C /* Build configuration list for PBXProject "Vegetables" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				603E741E1D62B59500589F7C /* Debug */,
+				603E741F1D62B59500589F7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		603E74201D62B59500589F7C /* Build configuration list for PBXNativeTarget "Vegetables" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				603E74211D62B59500589F7C /* Debug */,
+				603E74221D62B59500589F7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		603E74231D62B59500589F7C /* Build configuration list for PBXNativeTarget "VegetablesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				603E74241D62B59500589F7C /* Debug */,
+				603E74251D62B59500589F7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		603E74261D62B59500589F7C /* Build configuration list for PBXNativeTarget "VegetablesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				603E74271D62B59500589F7C /* Debug */,
+				603E74281D62B59500589F7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		603E73FF1D62B59500589F7C /* Vegetables.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				603E74001D62B59500589F7C /* Vegetables.xcdatamodel */,
+			);
+			currentVersion = 603E74001D62B59500589F7C /* Vegetables.xcdatamodel */;
+			path = Vegetables.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 603E73E81D62B59500589F7C /* Project object */;
+}
