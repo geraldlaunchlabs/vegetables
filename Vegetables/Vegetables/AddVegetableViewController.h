@@ -6,8 +6,15 @@
 //  Copyright © 2016 LLDM. All rights reserved.
 //
 
-#import "ViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface AddVegetableViewController : ViewController
+@interface AddVegetableViewController : UIViewController<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+
+@property (strong, nonatomic) IBOutlet UIImageView *previewPhoto;
+@property (strong, nonatomic) IBOutlet UITextField *photoURL;
+@property (strong, nonatomic) IBOutlet UITextField *name;
+@property (strong, nonatomic) IBOutlet UIButton *saveBtn;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *loading;
+@property (strong, nonatomic) IBOutlet UILabel *alert;
 
 @end

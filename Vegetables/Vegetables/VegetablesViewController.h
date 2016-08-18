@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VegetablesViewController : UITableViewController
+@interface VegetablesViewController : UIViewController
 
 @property (nonatomic, strong) NSCache *imageCache;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *loading;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+
 
 @end

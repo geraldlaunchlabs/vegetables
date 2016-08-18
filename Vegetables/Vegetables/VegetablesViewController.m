@@ -20,29 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.imageCache = [[NSCache alloc] init];
-    
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        
-        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-        [request setURL:[NSURL URLWithString:@"http://192.168.1.214:3000/v1/vegetables/"]];
-        [request setHTTPMethod:@"GET"];
-        
-        NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-        [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-            if(error == nil) {
-                vegetables = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-                
-                //NSLog(@"requestReply: %@",vegetables[@"vegetables"]);
-                [self.tableView reloadData];
-            }
-            else {
-                
-            }
-        }] resume];
-        
-    });
-    
+    [self isLoading:YES];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -50,10 +28,12 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [self getData];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    
-    NSLog(@"\n\n\nasdadadadasdad\n\n\n");
     // Dispose of any resources that can be recreated.
 }
 
@@ -75,25 +55,26 @@
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
-        //cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
         imageLoaded[indexPath.row] = nil;
     }
     
+    //cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
     cell.textLabel.text = vegetables[@"vegetables"][(int)indexPath.row][@"name"];
     
     if(imageLoaded[indexPath.row] != nil)
         cell.imageView.image = imageLoaded[indexPath.row];
     else {
-        cell.imageView.image = [UIImage imageNamed:@"noImg.png"];
+        cell.imageView.image = [UIImage imageNamed:@"loading.jpg"];
         dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
             UIImage *photo = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:vegetables[@"vegetables"][(int)indexPath.row][@"photo"][@"url"]]]];
-            if(photo != nil)
+            
             dispatch_async(dispatch_get_main_queue(), ^(void) {
-                if(photo != nil) {
-                    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-                    if (cell)
-                        cell.imageView.image = photo;
-                } else cell.imageView.image = [UIImage imageNamed:@"noImg.png"];
+                
+                UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+                if(!photo || !cell)
+                    cell.imageView.image = [UIImage imageNamed:@"noImg.png"];
+                else
+                    cell.imageView.image = photo;
                 imageLoaded[indexPath.row] = cell.imageView.image;
             });
         });
@@ -101,10 +82,38 @@
     float w = cell.frame.size.height*1.5/cell.imageView.image.size.width;
     float h = cell.frame.size.height/cell.imageView.image.size.height;
     cell.imageView.transform=CGAffineTransformMakeScale(w,h);
+    
     return cell;
 }
 
+- (void)getData {
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setURL:[NSURL URLWithString:@"http://192.168.1.214:3000/v1/vegetables/"]];
+    [request setHTTPMethod:@"GET"];
 
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if(error == nil) {
+            vegetables = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+            
+            //NSLog(@"requestReply: %@",vegetables[@"vegetables"]);
+            NSLog(@"aaa");
+        } else {
+            
+        }
+        [self isLoading:NO];
+        [self.tableView reloadData];
+    }] resume];
+}
+
+-(void)isLoading:(BOOL)stillLoading {
+    if(stillLoading) {
+        [self.loading startAnimating];
+    }
+    else {
+        [self.loading stopAnimating];
+    }
+}
 
 /*
 // Override to support conditional editing of the table view.

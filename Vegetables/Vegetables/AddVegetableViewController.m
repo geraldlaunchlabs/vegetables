@@ -7,10 +7,10 @@
 //
 
 #import "AddVegetableViewController.h"
-#define appService [NSURL \
-URLWithString:@"http://192.168.1.214:3000/v1/vegetables"]
 
-@interface AddVegetableViewController ()
+@interface AddVegetableViewController () {
+    UIImage *photo;
+}
 
 @end
 
@@ -19,21 +19,71 @@ URLWithString:@"http://192.168.1.214:3000/v1/vegetables"]
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Create a simple dictionary with numbers.
+    self.saveBtn.enabled = NO;
+
+    // Do any additional setup after loading the view.
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
+-(IBAction) getPhoto:(id) sender {
+    self.alert.hidden = YES;
+    if(self.photoURL.text.length == 0) {
+        UIImagePickerController * picker = [[UIImagePickerController alloc] init];
+        picker.delegate = self;
+        picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+        [self presentViewController:picker animated:YES completion:nil];
+    } else {
+        [self isLoading:YES];
+        dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
+            NSURL *photoURL = [NSURL URLWithString:self.photoURL.text];
+            photo = [UIImage imageWithData:[NSData dataWithContentsOfURL:photoURL]];
+            if(!photo) photo = [UIImage imageNamed:@"noImg.png"];
+            photo = [self imageWithImage:photo proportionalResizeWithWidth:320];
+            dispatch_async(dispatch_get_main_queue(), ^(void) {
+                self.previewPhoto.image = photo;
+                [self isLoading:NO];
+            });
+        });
+    }
+    [self checkFields];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    photo = [info valueForKey:UIImagePickerControllerOriginalImage];
+    self.previewPhoto.image = photo;
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)onNameChange:(id)sender {
+    self.alert.hidden = YES;
+    [self checkFields];
+}
+
+-(void) checkFields {
+    if(self.name.text.length > 0 && photo)
+        self.saveBtn.enabled = YES;
+    else
+        self.saveBtn.enabled = NO;
+}
+
+- (IBAction)save:(id)sender {
+    [self isLoading:YES];
+    NSString *B64Photo = [UIImagePNGRepresentation(photo) base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+    
     NSDictionary *vegetables =@{
-                                @"name":@"Oddish",
-                                @"photo":@{
-                                        @"url":@"http://cdn.bulbagarden.net/upload/thumb/4/43/043Oddish.png/250px-043Oddish.png"
-                                        }
+                                @"name":self.name.text,
+                                @"photo":B64Photo
                                 };
     
-    NSData *JSONData = [NSJSONSerialization dataWithJSONObject:vegetables
-                                                       options:0
-                                                         error:nil];
+    NSData *JSONData = [NSJSONSerialization dataWithJSONObject:vegetables options:0 error:nil];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://192.168.1.214:3000/v1/vegetables"]];
     
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:appService];
-    
-    // Set method, body & content-type
     request.HTTPMethod = @"POST";
     request.HTTPBody = JSONData;
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
@@ -43,39 +93,42 @@ URLWithString:@"http://192.168.1.214:3000/v1/vegetables"]
      [NSString stringWithFormat:@"%lu",
       (unsigned long)[JSONData length]] forHTTPHeaderField:@"Content-Length"];
     
-    [NSURLConnection sendAsynchronousRequest:request
-                                       queue:[NSOperationQueue mainQueue]
-                           completionHandler:^(NSURLResponse *r, NSData *data, NSError *error)
-     {
-         
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *r, NSData *data, NSError *error) {
          if (!data)
-         {
              NSLog(@"No data returned from server, error ocurred: %@", error);
-             NSString *userErrorText = [NSString stringWithFormat:@"Error communicating with server: %@", error.localizedDescription];
-             return;
+         else {
+             NSError *deserr;
+             NSDictionary *responseDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&deserr];
+             NSLog(@"response:\n\n\n%@\n\n\n", responseDict);
+             self.alert.hidden = NO;
          }
-         
-         NSLog(@"got the NSData fine. here it is...\n%@\n", data);
-         NSLog(@"next step, deserialising");
-         
-         NSError *deserr;
-         NSDictionary *responseDict = [NSJSONSerialization
-                                       JSONObjectWithData:data
-                                       options:kNilOptions
-                                       error:&deserr];
-         
-         NSLog(@"so, here's the responseDict\n\n\n%@\n\n\n", responseDict);
-         
-         // LOOK at that output on your console to learn how to parse it.
-         // to get individual values example blah = responseDict[@"fieldName"];
+        [self isLoading:NO];
      }];
-
-    // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)isLoading:(BOOL)stillLoading {
+    if(stillLoading)
+        [self.loading startAnimating];
+    else
+        [self.loading stopAnimating];
+}
+
+- (UIImage *)imageWithImage:(UIImage *)image proportionalResizeWithWidth:(int)width {
+    
+    float div = 1;
+    if(image.size.width > width)
+        div = image.size.width/width;
+    
+    CGSize newSize = CGSizeMake(image.size.width/div,image.size.height/div);
+    
+    NSLog(@"\n\n\nwidth: %f\nheight: %f",image.size.width/div,image.size.height/div);
+    
+    UIGraphicsBeginImageContext(newSize);
+    [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *resizedImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    return resizedImage;
 }
 
 /*

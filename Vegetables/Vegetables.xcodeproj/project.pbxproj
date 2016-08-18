@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		603571631D656A950021974C /* loading.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 603571621D656A950021974C /* loading.jpg */; };
 		6038C4231D64341400A5AA8B /* noImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6038C4221D64341400A5AA8B /* noImg.png */; };
 		603E73F51D62B59500589F7C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 603E73F41D62B59500589F7C /* main.m */; };
 		603E73F81D62B59500589F7C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 603E73F71D62B59500589F7C /* AppDelegate.m */; };
-		603E73FB1D62B59500589F7C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603E73FA1D62B59500589F7C /* ViewController.m */; };
 		603E73FE1D62B59500589F7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 603E73FC1D62B59500589F7C /* Main.storyboard */; };
 		603E74011D62B59500589F7C /* Vegetables.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 603E73FF1D62B59500589F7C /* Vegetables.xcdatamodeld */; };
 		603E74031D62B59500589F7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 603E74021D62B59500589F7C /* Assets.xcassets */; };
@@ -18,7 +18,6 @@
 		603E74111D62B59500589F7C /* VegetablesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 603E74101D62B59500589F7C /* VegetablesTests.m */; };
 		603E741C1D62B59500589F7C /* VegetablesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 603E741B1D62B59500589F7C /* VegetablesUITests.m */; };
 		603E742B1D62B61C00589F7C /* VegetablesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603E742A1D62B61C00589F7C /* VegetablesViewController.m */; };
-		603E74371D6303AC00589F7C /* loading.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 603E74361D6303AC00589F7C /* loading.jpg */; };
 		603E74391D6305CD00589F7C /* noImg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 603E74381D6305CD00589F7C /* noImg.jpg */; };
 		603E743C1D63158700589F7C /* AddVegetableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603E743B1D63158700589F7C /* AddVegetableViewController.m */; };
 /* End PBXBuildFile section */
@@ -41,13 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		603571621D656A950021974C /* loading.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loading.jpg; sourceTree = "<group>"; };
 		6038C4221D64341400A5AA8B /* noImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noImg.png; sourceTree = "<group>"; };
 		603E73F01D62B59500589F7C /* Vegetables.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vegetables.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		603E73F41D62B59500589F7C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		603E73F61D62B59500589F7C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		603E73F71D62B59500589F7C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		603E73F91D62B59500589F7C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		603E73FA1D62B59500589F7C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		603E73FD1D62B59500589F7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		603E74001D62B59500589F7C /* Vegetables.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Vegetables.xcdatamodel; sourceTree = "<group>"; };
 		603E74021D62B59500589F7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,7 +59,6 @@
 		603E741D1D62B59500589F7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		603E74291D62B61C00589F7C /* VegetablesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VegetablesViewController.h; sourceTree = "<group>"; };
 		603E742A1D62B61C00589F7C /* VegetablesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VegetablesViewController.m; sourceTree = "<group>"; };
-		603E74361D6303AC00589F7C /* loading.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loading.jpg; sourceTree = "<group>"; };
 		603E74381D6305CD00589F7C /* noImg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = noImg.jpg; sourceTree = "<group>"; };
 		603E743A1D63158700589F7C /* AddVegetableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddVegetableViewController.h; sourceTree = "<group>"; };
 		603E743B1D63158700589F7C /* AddVegetableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddVegetableViewController.m; sourceTree = "<group>"; };
@@ -95,7 +92,7 @@
 		603E73E71D62B59500589F7C = {
 			isa = PBXGroup;
 			children = (
-				603E74361D6303AC00589F7C /* loading.jpg */,
+				603571621D656A950021974C /* loading.jpg */,
 				603E74381D6305CD00589F7C /* noImg.jpg */,
 				6038C4221D64341400A5AA8B /* noImg.png */,
 				603E73F21D62B59500589F7C /* Vegetables */,
@@ -120,8 +117,6 @@
 			children = (
 				603E73F61D62B59500589F7C /* AppDelegate.h */,
 				603E73F71D62B59500589F7C /* AppDelegate.m */,
-				603E73F91D62B59500589F7C /* ViewController.h */,
-				603E73FA1D62B59500589F7C /* ViewController.m */,
 				603E74291D62B61C00589F7C /* VegetablesViewController.h */,
 				603E742A1D62B61C00589F7C /* VegetablesViewController.m */,
 				603E743A1D63158700589F7C /* AddVegetableViewController.h */,
@@ -265,11 +260,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				603571631D656A950021974C /* loading.jpg in Resources */,
 				6038C4231D64341400A5AA8B /* noImg.png in Resources */,
 				603E74061D62B59500589F7C /* LaunchScreen.storyboard in Resources */,
 				603E74031D62B59500589F7C /* Assets.xcassets in Resources */,
 				603E73FE1D62B59500589F7C /* Main.storyboard in Resources */,
-				603E74371D6303AC00589F7C /* loading.jpg in Resources */,
 				603E74391D6305CD00589F7C /* noImg.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,7 +290,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				603E73FB1D62B59500589F7C /* ViewController.m in Sources */,
 				603E74011D62B59500589F7C /* Vegetables.xcdatamodeld in Sources */,
 				603E743C1D63158700589F7C /* AddVegetableViewController.m in Sources */,
 				603E742B1D62B61C00589F7C /* VegetablesViewController.m in Sources */,
